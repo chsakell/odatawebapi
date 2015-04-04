@@ -31,7 +31,15 @@ namespace ODataWebAPI.API
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Employee>("Employees");
             builder.EntitySet<Address>("Addresses");
-            builder.EntitySet<Company>("Companies");
+            var companies = builder.EntitySet<Company>("Companies");
+
+            // Define a custom action on Companies
+            var addCompanyEmployeeByIdAction = builder.Entity<Company>().Action("AddCompanyEmployee");
+            addCompanyEmployeeByIdAction.Parameter<string>("name");
+            addCompanyEmployeeByIdAction.Parameter<string>("surname");
+            addCompanyEmployeeByIdAction.Parameter<string>("email");
+            addCompanyEmployeeByIdAction.Parameter<int>("address");
+            addCompanyEmployeeByIdAction.ReturnsFromEntitySet<Employee>("Employees");
 
             return builder.GetEdmModel();
         }
