@@ -10,7 +10,8 @@
                 'getEmployee': { method: 'GET', params: { key: '@key' }, url: odataUrl + '(:key)' },
                 'getEmployeeAdderss': { method: 'GET', params: { key: '@key' }, url: odataUrl + '(:key)' + '/Address' },
                 'getEmployeeCompany': { method: 'GET', params: { key: '@key' }, url: odataUrl + '(:key)' + '/Company' },
-                'deleteEmployee': { method: 'DELETE', params: { key: '@key' }, url: odataUrl + '(:key)' }
+                'deleteEmployee': { method: 'DELETE', params: { key: '@key' }, url: odataUrl + '(:key)' },
+                'addEmployee': { method: 'POST', url: odataUrl }
             });
     }).factory('notificationFactory', function () {
         return {

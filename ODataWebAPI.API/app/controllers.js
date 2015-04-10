@@ -74,4 +74,22 @@
                 $scope.getTop10Employees();
             });
         }
+
+        $scope.addEmployee = function () {
+            var newEmployee = $scope.newEmployee;
+
+            return (new employeeService({
+                "FirstName": newEmployee.FirstName,
+                "Surname": newEmployee.Surname,
+                "Email": newEmployee.Email,
+                "AddressID": 1, // normally obtained from UI
+                "CompanyID": 3 // normally obtained from UI
+            })).$addEmployee()
+            .then(function (data) {
+                notificationFactory.success('Employee ' + newEmployee.FirstName + ' ' + newEmployee.Surname
+                    + ' added successfully');
+                
+                $scope.newEmployee = {};
+            });
+        }
     });
