@@ -1,9 +1,17 @@
 # ASP.NET Web API feat. OData
 
 Blog post: <a href="http://chsakell.com/2015/04/04/asp-net-web-api-feat-odata/">ASP.NET Web API feat. OData</a>
-
+<p>
+Combine ASP.NET Web API and <a href="http://www.odata.org/">OData</a> to build queryable and interoperable RESTful APIs.<br/>
+<h4>Learn how to:</h4>
+<ol>
+<li>Enable OData Query syntax to a Web API Controller</li>
+<li>Enable OData formats and Entity Data Models</li>
+<li>Consume the OData Web API using AngularJS client</li>
+</ol>
+</p>
 <h2>Donations</h2>
-For being part of open source projects and documenting my work here and on <a href="https://chsakell.com">chsakell's blog</a> I really do not charge anything. I try to avoid any type of ads also.
+For being part of open source projects and documenting my work here and on <a href="https://chsakell.com">chsakell's blog</a> I really do not charge anything. I try to avoid any type of ads also. 
 
 If you think that any information you obtained here is worth of some money and are willing to pay for it, feel free to send any amount through paypal.
 
